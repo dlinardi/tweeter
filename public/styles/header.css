@@ -1,5 +1,17 @@
 header {
   height: 400px;
   width: 100%;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eb4d4b;
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+}
+
+header h2 {
+  font-size: 32px;
+  font-weight: 400;
+  color: #fff;
+  margin: auto;
 }
