@@ -7,6 +7,8 @@ nav {
   color: #fff;
   background-color: #4056A1;
   padding: 1.5em;
+  position: fixed;
+  top: 0;
 }
 
 nav span { 

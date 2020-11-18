@@ -1,9 +1,10 @@
-main section {
+main section.new-tweet {
   margin-top: 1.5em;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 1em;
 }
 
 .new-tweet form {
@@ -33,7 +34,7 @@ main section {
   border-bottom: 4px solid #545149;
 }
 
-.new-tweet div {
+.new-tweet footer {
   padding: 0.5em 0;
   display: flex;
   flex-direction: row;
@@ -41,7 +42,7 @@ main section {
   font-family: 'Bungee', sans-serif;
 }
 
-.new-tweet div button {
+.new-tweet footer button {
   font-size: 0.8em;
   color: #fff;
   background-color: #4056A1;
@@ -49,7 +50,7 @@ main section {
   padding: 5px 10px;
 }
 
-.new-tweet div button:hover {
+.new-tweet footer button:hover {
   color: #eee;
   background-color: #273563;
 }
