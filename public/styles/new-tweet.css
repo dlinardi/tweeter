@@ -13,6 +13,7 @@ main section {
 
 .new-tweet label {
   padding: 0.5em 0;
+  font-weight: 600;
 }
 
 .new-tweet textarea {
@@ -21,8 +22,9 @@ main section {
   border: 0px;
   resize: none;
   height: 1.5em;
+  padding-bottom: 1.5em;
   border-bottom: 4px solid #545149;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .new-tweet textarea:focus {
