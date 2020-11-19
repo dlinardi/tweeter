@@ -33,6 +33,22 @@ article.tweet header span {
   padding: 1em 0.5em;
 }
 
+article.tweet .tweeter-name {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+}
+
+article.tweet .tweeter-name img {
+  block-size: 2.5em;
+  padding-right: 10px;
+}
+
+article.tweet .tweeter-name span {
+  font-size: 1em;
+}
+
 article.tweet .tweeter-handle {
   opacity: 0;
   color: rgba(64, 86, 161, 0.4);
