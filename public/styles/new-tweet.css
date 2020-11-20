@@ -1,7 +1,6 @@
 main section.new-tweet {
-  margin-top: 1.5em;
   flex-grow: 1;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 1em;

@@ -114,9 +114,12 @@ const validInput = (input) => {
 
 const animateNavArrow = () => {
   let bounce;
-
+  
   $('#compose').hover(function() {
-  // when hovering, bounce up and down 
+    // set cursor to mimic an link
+    $('#compose').css('cursor', 'pointer');
+
+    // when hovering, bounce up and down 
     bounce = setInterval(() => {
       $('#navArrow').animate({ 'margin-top':'10px' }, 200);
       $('#navArrow').animate({ 'margin-top':'5px' }, 200);
@@ -132,11 +135,16 @@ const animateNavArrow = () => {
 
 $(document).ready(() => {
 
+  // animate navigation arrow/
   animateNavArrow();
+  
+  // click handler for toggling new-tweet
+  $('#compose').click(function() {
+    $('.new-tweet').fadeToggle();
+  });
 
   loadTweets();
   
-
   $('form').submit(function(e) {
     e.preventDefault();
 

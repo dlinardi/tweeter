@@ -5,7 +5,7 @@ article.tweet {
   border: 4px solid #545149;
   padding: 0 0.5em;
   margin-bottom: 1em;
-  
+
   -webkit-transition: all ease-out 0.2s;
   -moz-transition: all ease-out 0.2s;
   -o-transition: all ease-out 0.2s;
@@ -25,6 +25,14 @@ article.tweet:hover {
 
 article.tweet:hover .tweeter-handle {
   opacity: 1;
+}
+
+article.tweet:hover .social-icons {
+  opacity: 1;
+  -webkit-transition: opacity ease-out 0.4s;
+  -moz-transition: opacity ease-out 0.4s;
+  -o-transition: opacity ease-out 0.4s;
+  transition: opacity ease-out 0.4s;
 }
 
 article.tweet header {
@@ -79,6 +87,11 @@ article.tweet footer span {
 
 article.tweet footer span.social-icons {
   color: rgb(64, 86, 161);
+  opacity: 0;
+  -webkit-transition: opacity ease-out 0.4s;
+  -moz-transition: opacity ease-out 0.4s;
+  -o-transition: opacity ease-out 0.4s;
+  transition: opacity ease-out 0.4s;
 }
 
 article.tweet footer span.social-icons i {
