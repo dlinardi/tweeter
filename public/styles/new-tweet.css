@@ -59,8 +59,8 @@ main section.new-tweet {
   background: transparent;
   border: 0px;
   resize: none;
-  height: 1.5em;
-  padding-bottom: 1.5em;
+  /* height: 1.5em; */
+  /* padding-bottom: 1.5em; */
   border-bottom: 4px solid #545149;
   /* overflow: hidden; */
 }
