@@ -121,14 +121,14 @@ const animateNavArrow = () => {
 
     // when hovering, bounce up and down 
     bounce = setInterval(() => {
-      $('#navArrow').animate({ 'margin-top':'10px' }, 200);
-      $('#navArrow').animate({ 'margin-top':'5px' }, 200);
+      $('#nav-arrow').animate({ 'margin-top':'10px' }, 200);
+      $('#nav-arrow').animate({ 'margin-top':'5px' }, 200);
     }, 500);
   },
   // move back to original position once not hovering
   function() {
     clearInterval(bounce);
-    $('#navArrow').css('margin-top', '0px');
+    $('#nav-arrow').css('margin-top', '0px');
   });
 };
 

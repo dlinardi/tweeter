@@ -36,3 +36,36 @@ main.container {
   flex-direction: column;
   justify-content: center;
 }
+
+#top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  cursor: pointer;
+  padding: 15px;
+  background: red;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  right: 30px;
+  bottom: 30px;
+  -webkit-transition: all ease-out 0.7s;
+  -moz-transition: all ease-out 0.7s;
+  -o-transition: all ease-out 0.7s;
+  transition: all ease-out 0.7s;
+}
+
+#top i {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#top:hover {
+  opacity: 0.8;
+  -webkit-transition: all ease-out 0.7s;
+  -moz-transition: all ease-out 0.7s;
+  -o-transition: all ease-out 0.7s;
+  transition: all ease-out 0.7s;
+}
