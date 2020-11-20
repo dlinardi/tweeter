@@ -58,17 +58,69 @@ $(document).ready(() => {
     }
   };
 
+  const hideValidation = (selector, duration) => {
+    $(selector).fadeOut(duration, () => {
+      $(selector).css('display', 'none');
+    });
+  };
+
+  const validInput = (input) => {
+    if (!input) {
+      // create error msg based on input
+      $('#error-msg').text('Invalid input, please do not leave your tweet blank.');
+      
+      // fade in, then fade out error message after 7 seconds
+      $('.invalid').css('display', 'flex').hide().fadeIn(400, () => {
+        setTimeout(() => {
+          hideValidation('.invalid' ,400);
+        }, 7000);
+      });
+
+      return false;
+    } else if (input.length > 140) {
+      // create error message based on input
+      $('#error-msg').text('Invalid input, your tweet is too long!');
+
+      $('.invalid').css('display', 'flex').hide().fadeIn(400, () => {
+        setTimeout(() => {
+          hideValidation('.invalid' ,400);
+        }, 7000);
+      });
+
+      return false;
+    }
+    // create success message if input is valid
+    $('#success-msg').text('Your tweet has been posted.');
+
+    $('.success').css('display', 'flex').hide().fadeIn(400, () => {
+      setTimeout(() => {
+        hideValidation('.success',400);
+      }, 1500);
+    });
+
+    return true;
+  };
+
   $('form').submit(function(e) {
     e.preventDefault();
 
-    $
+    hideValidation('.invalid', 200);
+    hideValidation('.success', 200);
+
+    const userInput = $('form textarea').val();
+
+    if (validInput(userInput)) {
+      $
       .ajax({
         url: "/tweets",
         method: "POST",
         data: $('form').serialize()
       })
-      .then(res => console.log(res))
+      .then(() => loadTweets())
       .catch(error => console.log(error));
+    } else {
+      console.log('Invalid input.')
+    }
 
   });
 

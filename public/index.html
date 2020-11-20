@@ -48,6 +48,20 @@
 
       <section class="new-tweet">
         <!-- <h2>Compose Tweet</h2> -->
+        <div class="invalid">
+          <span>
+            <span><i class="fas fa-exclamation-triangle"></i></span>
+            <span id="error-msg"></span>
+          </span>
+        </div>
+
+        <div class="success">
+          <span>
+            <span><i class="fas fa-check"></i></span>
+            <span id="success-msg"></span>
+          </span>
+        </div>
+
         <form method="POST" action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
           <textarea maxlength="1477" name="text" id="tweet-text"></textarea>
@@ -84,7 +98,7 @@
           </footer>
 
         </article>
-        
+
       </section>
 
     </main>

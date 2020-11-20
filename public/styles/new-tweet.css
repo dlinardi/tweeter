@@ -7,6 +7,44 @@ main section.new-tweet {
   margin-bottom: 1em;
 }
 
+.invalid {
+  display: none; /* changes to flex on error */
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.8em;
+  border: 2px solid rgb(255,0,0);
+  background-color: rgba(255,0,0,0.2);
+  color: rgb(255,0,0);
+  padding: 1em;
+  margin-bottom: 0.5em;
+}
+
+.invalid span {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 0.5em;
+}
+
+.success {
+  display: none; /* changes to flex on error */
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.8em;
+  border: 2px solid rgb(39, 174, 96);
+  background-color: rgba(39, 174, 96, 0.2);
+  color: rgb(39, 174, 96);
+  padding: 1em;
+  margin-bottom: 0.5em;
+}
+
+.success span {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 0.5em;
+}
+
 .new-tweet form {
   display: flex;
   flex-direction: column;

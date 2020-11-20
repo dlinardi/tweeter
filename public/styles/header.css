@@ -10,6 +10,10 @@ body > header {
   background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
 }
 
+body > header img {
+  block-size: 7em;
+}
+
 body > header h2 {
   font-size: 32px;
   font-weight: 400;
