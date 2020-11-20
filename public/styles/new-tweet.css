@@ -86,10 +86,18 @@ main section.new-tweet {
   background-color: #4056A1;
   border: none;
   padding: 5px 10px;
+  -webkit-transition: all ease-out 0.2s;
+  -moz-transition: all ease-out 0.2s;
+  -o-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
 }
 
 .new-tweet footer button:hover {
   color: #eee;
   background-color: #273563;
+  -webkit-transition: all ease-out 0.2s;
+  -moz-transition: all ease-out 0.2s;
+  -o-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
 }
 
