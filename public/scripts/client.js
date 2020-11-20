@@ -132,18 +132,42 @@ const animateNavArrow = () => {
   });
 };
 
+const scrollCheck = () => {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() - 200 > 0) {
+      $('.top-container').stop().fadeIn(500);
+      $('nav').stop().css('background-color', 'transparent').css("transition","0.5s ease-in-out ");
+      $('nav #logo').stop().css('color', '#4056A1').css("transition","0.5s ease-in-out ");
+      $('#compose').fadeOut(500).hide();
+    } else {
+      $('.top-container').stop().fadeOut(500);
+      $('nav').css('background-color', '#4056A1').css("transition","0.2s ease-in-out ");
+      $('nav #logo').css('color', '#fff').css("transition","0.5s ease-in-out ");
+      $('#compose').show().css("transition","0.5s ease-in-out ");
+    }
+  });
+};
 
 $(document).ready(() => {
 
   // animate navigation arrow/
   animateNavArrow();
-  
-  // click handler for toggling new-tweet
-  let composeClickCount = 0; // count for flipping arrow
-  $('#compose').click(function() {
+  scrollCheck();
 
+  $('#top').click(() => {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 200);
+    $('#compose').trigger('click');
+  });
+  
+  let composeClickCount = 0; // count for flipping arrow
+
+  // click handler for toggling new-tweet
+  $('#compose').click(function() {
     // if composeClickCount is even, arrow is up, 
     // if composeClickCount is odd, arrow is down
+
     if (composeClickCount % 2 === 0) {
       $('#nav-arrow i').removeClass('fa-angle-double-down');
       $('#nav-arrow i').addClass('fa-angle-double-up');
@@ -151,8 +175,9 @@ $(document).ready(() => {
       $('#nav-arrow i').removeClass('fa-angle-double-up');
       $('#nav-arrow i').addClass('fa-angle-double-down');
     }
-
+    
     $('.new-tweet').fadeToggle();
+    $('#tweet-text').focus();
 
     composeClickCount++;
   });

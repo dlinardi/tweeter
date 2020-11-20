@@ -37,6 +37,10 @@ main.container {
   justify-content: center;
 }
 
+span.top-container {
+  display: none;
+}
+
 #top {
   display: flex;
   justify-content: center;
@@ -44,7 +48,7 @@ main.container {
   position: fixed;
   cursor: pointer;
   padding: 15px;
-  background: red;
+  background: #eb4d4b;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -63,7 +67,8 @@ main.container {
 }
 
 #top:hover {
-  opacity: 0.8;
+  opacity: 0.5;
+  background-color: #a73230;
   -webkit-transition: all ease-out 0.7s;
   -moz-transition: all ease-out 0.7s;
   -o-transition: all ease-out 0.7s;
