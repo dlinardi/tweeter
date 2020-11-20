@@ -112,9 +112,30 @@ const validInput = (input) => {
   return true;
 };
 
+const animateNavArrow = () => {
+  let bounce;
+
+  $('#compose').hover(function() {
+  // when hovering, bounce up and down 
+    bounce = setInterval(() => {
+      $('#navArrow').animate({ 'margin-top':'10px' }, 200);
+      $('#navArrow').animate({ 'margin-top':'5px' }, 200);
+    }, 500);
+  },
+  // move back to original position once not hovering
+  function() {
+    clearInterval(bounce);
+    $('#navArrow').css('margin-top', '0px');
+  });
+};
+
+
 $(document).ready(() => {
 
+  animateNavArrow();
+
   loadTweets();
+  
 
   $('form').submit(function(e) {
     e.preventDefault();
