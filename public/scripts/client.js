@@ -139,8 +139,22 @@ $(document).ready(() => {
   animateNavArrow();
   
   // click handler for toggling new-tweet
+  let composeClickCount = 0; // count for flipping arrow
   $('#compose').click(function() {
+
+    // if composeClickCount is even, arrow is up, 
+    // if composeClickCount is odd, arrow is down
+    if (composeClickCount % 2 === 0) {
+      $('#nav-arrow i').removeClass('fa-angle-double-down');
+      $('#nav-arrow i').addClass('fa-angle-double-up');
+    } else {
+      $('#nav-arrow i').removeClass('fa-angle-double-up');
+      $('#nav-arrow i').addClass('fa-angle-double-down');
+    }
+
     $('.new-tweet').fadeToggle();
+
+    composeClickCount++;
   });
 
   loadTweets();
