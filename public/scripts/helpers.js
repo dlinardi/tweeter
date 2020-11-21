@@ -140,15 +140,26 @@ const animateNavArrow = () => {
 const scrollCheck = () => {
   $(window).scroll(function () {
     if ($(this).scrollTop() - 200 > 0) {
+
+      // only on desktop screens, remove nav bar and add temp media query styling to .temp-nav-responsive
+      if (window.matchMedia('(min-width: 1024px)').matches) {
+        $('.temp-nav-responsive').text("@media (min-width:1024px) { nav { background-color: transparent; transition: 0.5s ease-in-out; } }");
+      }
+
       $('.top-container').stop().fadeIn(250);
-      $('nav').stop().css('background-color', 'transparent').css("transition","0.5s ease-in-out ");
       $('nav #logo').stop().css('color', '#4056A1').css("transition","0.5s ease-in-out ");
       $('#compose').fadeOut(500).hide();
+
     } else {
+      // only on desktop screens, bring back nav bar and add temp media query styling to .temp-nav-responsive
+      if (window.matchMedia('(min-width: 1024px)').matches) {
+        $('.temp-nav-responsive').text("@media (min-width:1024px) { nav { background-color: #4056A1; transition: 0.2s ease-in-out; } }");
+      }
+
       $('.top-container').stop().fadeOut(250);
-      $('nav').css('background-color', '#4056A1').css("transition","0.2s ease-in-out ");
       $('nav #logo').css('color', '#fff').css("transition","0.5s ease-in-out ");
       $('#compose').fadeIn(500).show();
+
     }
   });
 };

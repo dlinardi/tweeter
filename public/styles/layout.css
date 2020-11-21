@@ -30,6 +30,14 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 main.container {
   width: 90%;
   display: flex;
@@ -73,4 +81,23 @@ span.top-container {
   -moz-transition: all ease-out 0.7s;
   -o-transition: all ease-out 0.7s;
   transition: all ease-out 0.7s;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+
+  .content-container {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 2em;
+  }
+
+  main.container {
+    width: 50vw;
+    margin-left: 2vw;
+  }
+
 }
