@@ -17,19 +17,19 @@ $(document).ready(() => {
 
     if (validInput(userInput)) {
       $
-      .ajax({
-        url: "/tweets",
-        method: "POST",
-        data: $('form').serialize()
-      })
-      .then(() => {
-        $('#tweet-text').val('');
-        $('.counter').val(140);
-        loadTweets();
-      })
-      .catch(error => console.log(error));
+        .ajax({
+          url: "/tweets",
+          method: "POST",
+          data: $('form').serialize()
+        })
+        .then(() => {
+          $('#tweet-text').val('');
+          $('.counter').val(140);
+          loadTweets();
+        })
+        .catch(error => console.log(error));
     } else {
-      console.log('Invalid input.')
+      console.log('Invalid input.');
     }
 
   });

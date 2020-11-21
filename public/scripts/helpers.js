@@ -61,7 +61,7 @@ const renderTweets = (tweets) => {
 const loadTweets = () => {
   $
     .ajax(
-      '/tweets', 
+      '/tweets',
       { method: "GET" }
     )
     .then(tweets => {
@@ -123,7 +123,7 @@ const animateNavArrow = () => {
     // set cursor to mimic an link
     $('#compose').css('cursor', 'pointer');
 
-    // when hovering, bounce up and down 
+    // when hovering, bounce up and down
     bounce = setInterval(() => {
       $('#nav-arrow').animate({ 'margin-top':'10px' }, 200);
       $('#nav-arrow').animate({ 'margin-top':'5px' }, 200);
@@ -138,7 +138,7 @@ const animateNavArrow = () => {
 
 // scroll check for nav/back-to-top animations/functionality.
 const scrollCheck = () => {
-  $(window).scroll(function () {
+  $(window).scroll(function() {
     if ($(this).scrollTop() - 200 > 0) {
 
       // only on desktop screens, remove nav bar and add temp media query styling to .temp-nav-responsive

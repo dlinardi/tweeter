@@ -5,9 +5,9 @@ $(document).ready(() => {
   scrollCheck();
 
   // count variable for flipping arrow in #compose
-  let composeClickCount = 0; 
+  let composeClickCount = 0;
 
-  // when back to top button is clicked scroll back to top 
+  // when back to top button is clicked scroll back to top
   // trigger #compose click event
   $('#top').click(() => {
     $('html, body').animate({
@@ -24,7 +24,7 @@ $(document).ready(() => {
   // click handler for toggling new-tweet
   $('#compose').click(function() {
 
-    // if composeClickCount is even, arrow is up, 
+    // if composeClickCount is even, arrow is up,
     // if composeClickCount is odd, arrow is down
     if (composeClickCount % 2 === 0) {
       $('#nav-arrow i').removeClass('fa-angle-double-down');
